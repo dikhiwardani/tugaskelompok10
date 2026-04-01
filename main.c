@@ -83,6 +83,8 @@ void kalkulator_diskon() {
     printf("----------------------------------------\n");
     printf("  Kamu hemat Rp %.2f!\n", jumlah_diskon);
     printf("========================================\n\n");
+
+}
 void splitBill() {
     float total;
     int orang;
