@@ -65,7 +65,6 @@ void splitBill() {
         printf("Per orang bayar: %.2f\n", hasil);
     }
 
-    return 0;
 }
 int main() {
     int pilihan;
@@ -100,7 +99,7 @@ int main() {
             default:
                 printf("Pilihan tidak valid, silakan coba lagi.\n");
         }
-    } while(pilihan != 4);
+    } while(pilihan != 5);
 
     return 0;
 }
