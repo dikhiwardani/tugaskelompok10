@@ -88,16 +88,25 @@ void bungaTabunganSederhana(){
 
     printf("Masukan Saldo Awal (Rp):");
     scanf("%f", &saldoAwal );
-    
+        if (saldoAwal <= 0) {    
+            printf("[ERROR] Saldo awal harus lebih dari 0!\n");
+            return;
+        }
     printf("Masukan Persentase Bunga Bulanan (%):");
     scanf("%f", &bungaBulanan);
+        if (bungaBulanan < 0 || bungaBulanan > 100) {
+            printf("[ERROR] Persentase bunga bulanan harus antara 0 - 100!\n");
+            return;    
+        }
+
     totalBunga = saldoAwal * (bungaBulanan / 100);
     totalUang = totalBunga + saldoAwal;
 
-    printf("Saldo Awal                       = Rp %2lf\n", saldoAwal);
-    printf("Persentase Bunga Bulanan         = %2lf%\n", bungaBulanan);
-    printf("Total Bunga Bulanan yang didapat = Rp %2lf\n", totalBunga);
-    printf("Total Uang                       = Rp %2lf\n", totalUang);
+    printf("Saldo Awal                       = Rp %2.lf\n", saldoAwal);
+    printf("Persentase Bunga Bulanan         = %2.lf%\n", bungaBulanan);
+    printf("Total Bunga Bulanan yang didapat = Rp %2.lf\n", totalBunga);
+    printf("Total Uang                       = Rp %2.lf\n", totalUang);
+}
 void splitBill() {
     float total;
     int orang;
