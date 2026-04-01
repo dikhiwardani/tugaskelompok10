@@ -88,17 +88,19 @@ void bungaTabunganSederhana(){
 
     printf("Masukan Saldo Awal (Rp):");
     scanf("%f", &saldoAwal );
-        if (saldoAwal <= 0) {    
+        while (saldoAwal <= 0) {    
             printf("[ERROR] Saldo awal harus lebih dari 0!\n");
-            return;
+            printf("Masukan Saldo Awal (Rp):");
+            scanf("%f", &saldoAwal );
         }
+    
     printf("Masukan Persentase Bunga Bulanan (%):");
     scanf("%f", &bungaBulanan);
-        if (bungaBulanan < 0 || bungaBulanan > 100) {
-            printf("[ERROR] Persentase bunga bulanan harus antara 0 - 100!\n");
-            return;    
+        while (bungaBulanan < 0 || bungaBulanan > 100) {
+                printf("[ERROR] Persentase bunga bulanan harus antara 0 - 100!\n");
+                printf("Masukan Persentase Bunga Bulanan (%):");
+                scanf("%f", &bungaBulanan);    
         }
-
     totalBunga = saldoAwal * (bungaBulanan / 100);
     totalUang = totalBunga + saldoAwal;
 
