@@ -6,7 +6,7 @@ void tampilkanHeader() {
     printf("\n");
     printf("--------------------------------------------------------------\n");
     printf("|               APLIKASI KEUANGAN KELOMPOK 10                 |\n");
-    printf("|              Kalkulator Keuangan Sehari-hari               |\n");
+    printf("|              Kalkulator Keuangan Sehari-hari                |\n");
     printf("--------------------------------------------------------------\n\n");
 }
 
@@ -47,31 +47,26 @@ void kalkulator_diskon() {
     printf("     KALKULATOR DISKON BELANJA\n");
     printf("========================================\n");
  
-    // Input harga awal
+
     printf("Masukkan harga awal barang (Rp): ");
     scanf("%f", &harga_awal);
  
-    // Validasi harga awal
     if (harga_awal <= 0) {
         printf("[ERROR] Harga awal harus lebih dari 0!\n");
         return;
     }
  
-    // Input persentase diskon
     printf("Masukkan persentase diskon (%%): ");
     scanf("%f", &persentase_diskon);
  
-    // Validasi persentase diskon
     if (persentase_diskon < 0 || persentase_diskon > 100) {
         printf("[ERROR] Persentase diskon harus antara 0 - 100!\n");
         return;
     }
  
-    // Hitung diskon dan harga akhir
     jumlah_diskon = harga_awal * (persentase_diskon / 100);
     harga_akhir   = harga_awal - jumlah_diskon;
  
-    // Tampilkan hasil
     printf("\n----------------------------------------\n");
     printf("  HASIL PERHITUNGAN:\n");
     printf("----------------------------------------\n");
@@ -110,7 +105,6 @@ void bungaTabunganSederhana(){
     totalBunga = saldoAwal * (bungaBulanan / 100);
     totalUang = totalBunga + saldoAwal;
     
-    system(cls);
     printf("\n===============================================\n");
     printf("     KALKULATOR BUNGA TABUNGAN SEDERHANA \n");
     printf("===============================================\n");
@@ -136,7 +130,7 @@ void splitBill() {
     } else {
         hasil = total / orang;
 
-        // Tampilan hasil (interface sederhana)
+    
         printf("\n==============================\n");
         printf("        HASIL PEMBAGIAN       \n");
         printf("==============================\n");
@@ -177,10 +171,10 @@ int main() {
                 splitBill();
                 break;
             case 3:
-                printf("Menjalankan Fitur C...\n");
+                bungaTabunganSederhana();
                 break;
             case 4:
-                printf("Menjalankan Fitur C...\n");
+                hitungSisaUang();
                 break;
             case 5:
                 printf("Terima kasih telah menggunakan Aplikasi Keuangan Kelompok 10\n");
