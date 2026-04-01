@@ -111,13 +111,21 @@ int main() {
     do {
         
         printf("\n=== APLIKASI KELOMPOK 1 ===\n");
-        printf("1. Fitur A (Tugas Anggota 1)\n");
-        printf("2. Fitur B (Tugas Anggota 2)\n");
-        printf("3. Fitur C (Tugas Anggota 3)\n");
-        printf("4. Fitur D (Tugas Anggota 4)\n");
-        printf("5. Keluar\n");
-        printf("Masukkan pilihan (1-5): ");
-        scanf("%d", &pilihan);
+        printf(" Kalkulator Diskon Belanja\n");
+        printf(" Kalkulator Split Bill\n");
+        printf(" Kalkulator Bunga Tabungan Sederhana\n");
+        printf(" Kalkulator Sisa uang jajan Harian\n");
+        printf(" Keluar\n");
+        printf("============================\n");
+        printf(" Masukkan pilihan kamuu (1-5): ");
+        
+        
+        if (scanf("%d", &pilihan) !=1) {
+            printf("input tidak valid! Harap masukkan angka.\n");
+            while(getchar() != '\n'); 
+            pilihan = 0;
+            continue;
+        }
 
         switch(pilihan) {
             case 1:
