@@ -83,9 +83,14 @@ void kalkulator_diskon() {
     printf("----------------------------------------\n");
     printf("  Kamu hemat Rp %.2f!\n", jumlah_diskon);
     printf("========================================\n\n");
+}
 void bungaTabunganSederhana(){
     float saldoAwal, bungaBulanan, totalUang, totalBunga;
 
+    printf("\n===============================================\n");
+    printf("     KALKULATOR BUNGA TABUNGAN SEDERHANA \n");
+    printf("===============================================\n");
+    
     printf("Masukan Saldo Awal (Rp):");
     scanf("%f", &saldoAwal );
         while (saldoAwal <= 0) {    
@@ -103,7 +108,12 @@ void bungaTabunganSederhana(){
         }
     totalBunga = saldoAwal * (bungaBulanan / 100);
     totalUang = totalBunga + saldoAwal;
-
+    
+    system(cls);
+    printf("\n===============================================\n");
+    printf("     KALKULATOR BUNGA TABUNGAN SEDERHANA \n");
+    printf("===============================================\n");
+    
     printf("Saldo Awal                       = Rp %2.lf\n", saldoAwal);
     printf("Persentase Bunga Bulanan         = %2.lf%\n", bungaBulanan);
     printf("Total Bunga Bulanan yang didapat = Rp %2.lf\n", totalBunga);
