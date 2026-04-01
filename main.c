@@ -14,7 +14,22 @@ void hitungSisaUang() {
 
     sisa = uangSaku - pengeluaran;
 
-    printf("Sisa uang saku hari ini: %.2f\n", sisa);
+    printf("\n=====================================\n");
+    printf("           HASIL PERHITUNGAN         \n");
+    printf("=====================================\n");
+    printf("Uang saku       : Rp %.2f\n", uangSaku);
+    printf("Pengeluaran     : Rp %.2f\n", pengeluaran);
+    printf("-------------------------------------\n");
+    printf("Sisa uang       : Rp %.2f\n", sisa);
+    printf("=====================================\n");
+
+    if (sisa < 0) {
+        printf("Uang kamu kurang!\n");
+    } else if (sisa == 0) {
+        printf("Uang kamu pas.\n");
+    } else {
+        printf("Kamu masih punya sisa uang.\n");
+    }
 }
 
 void kalkulator_diskon() {
