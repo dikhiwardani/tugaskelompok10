@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+void tampilkanHeader() {
+    printf("\n");
+    printf("--------------------------------------------------------------\n");
+    printf("|               APLIKASI KEUANGAN KELOMPOK 10                 |\n");
+    printf("|              Kalkulator Keuangan Sehari-hari               |\n");
+    printf("--------------------------------------------------------------\n\n");
+}
 
 void hitungSisaUang() {
     float uangSaku, pengeluaran, sisa;
@@ -109,15 +116,14 @@ int main() {
     int pilihan;
 
     do {
+        tampilkanHeader();
         
-        printf("\n=== APLIKASI KELOMPOK 1 ===\n");
-        printf(" Kalkulator Diskon Belanja\n");
-        printf(" Kalkulator Split Bill\n");
-        printf(" Kalkulator Bunga Tabungan Sederhana\n");
-        printf(" Kalkulator Sisa uang jajan Harian\n");
-        printf(" Keluar\n");
-        printf("============================\n");
-        printf(" Masukkan pilihan kamuu (1-5): ");
+        printf("[1] Kalkulator Diskon Belanja\n");
+        printf("[2] Kalkulator Split Bill\n");
+        printf("[3] Kalkulator Bunga Tabungan\n");
+        printf("[4] Kalkulator Sisa Uang Jajan\n");
+        printf("[5] Keluar dari Program\n\n");
+        printf(" Pilih menu (1-5): ");
         
         
         if (scanf("%d", &pilihan) !=1) {
@@ -141,10 +147,11 @@ int main() {
                 printf("Menjalankan Fitur C...\n");
                 break;
             case 5:
-                printf("Terima kasih telah menggunakan program ini.\n");
+                printf("Terima kasih telah menggunakan Aplikasi Keuangan Kelompok 10\n");
+                printf("Semoga membantu mengelola keuanganmu yaa\n\n");
                 break;
             default:
-                printf("Pilihan tidak valid, silakan coba lagi.\n");
+                printf("\n Pilihan tidak valid! Silakan pilih angka 1-5.\n");
         }
     } while(pilihan != 5);
 
