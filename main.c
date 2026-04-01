@@ -88,11 +88,20 @@ void splitBill() {
     printf("Jumlah orang: ");
     scanf("%d", &orang);
 
-    if (orang <= 0) {
-        printf("Jumlah orang tidak valid\n");
+     if (orang <= 0) {
+        printf("\n[ERROR] Jumlah orang tidak valid!\n");
     } else {
         hasil = total / orang;
-        printf("Per orang bayar: %.2f\n", hasil);
+
+        // Tampilan hasil (interface sederhana)
+        printf("\n==============================\n");
+        printf("        HASIL PEMBAGIAN       \n");
+        printf("==============================\n");
+        printf("Total Tagihan : Rp %.2f\n", total);
+        printf("Jumlah Orang  : %d orang\n", orang);
+        printf("------------------------------\n");
+        printf("Per Orang Bayar : Rp %.2f\n", hasil);
+        printf("==============================\n");
     }
 
 }
