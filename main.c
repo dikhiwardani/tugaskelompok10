@@ -1,6 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
+#include <stdio.h>
+
+void hitungSisaUang() {
+    float uangSaku, pengeluaran, sisa;
+
+    printf("Masukkan uang saku hari ini: ");
+    scanf("%f", &uangSaku);
+
+    printf("Masukkan total estimasi pengeluaran hari ini: ");
+    scanf("%f", &pengeluaran);
+
+    sisa = uangSaku - pengeluaran;
+
+    printf("Sisa uang saku hari ini: %.2f\n", sisa);
+}
 
 void kalkulator_diskon() {
     float harga_awal, persentase_diskon;
