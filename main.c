@@ -48,6 +48,26 @@ void kalkulator_diskon() {
     printf("========================================\n\n");
 }
 int main() {
+    float total;
+    int orang;
+    float hasil;
+
+    printf("Total tagihan: ");
+    scanf("%f", &total);
+
+    printf("Jumlah orang: ");
+    scanf("%d", &orang);
+
+    if (orang <= 0) {
+        printf("Jumlah orang tidak valid\n");
+    } else {
+        hasil = total / orang;
+        printf("Per orang bayar: %.2f\n", hasil);
+    }
+
+    return 0;
+}
+int main() {
     int pilihan;
 
     do {
